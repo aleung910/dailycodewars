@@ -68,3 +68,30 @@ function makeNegative(num) {
   
 //if already neg return the way it is, if postive return
 //negative of itself 
+
+//reversed strings
+function solution(str){
+  return str.split('').reverse().join('')
+}
+//testing grades
+function testResult(array) {
+  const totalMarks = array.length;
+  if (totalMarks === 0) {
+      return [0, { h: 0, a: 0, l: 0 }];
+  }
+
+  const classSum = array.reduce((acc, mark) => acc + mark, 0)
+  const classAverage = (classSum / totalMarks).toFixed(3)
+
+  const highMarks = array.filter(mark => mark === 9 || mark === 10).length
+  const averageMarks = array.filter(mark => mark === 7 || mark === 8).length
+  const lowMarks = totalMarks - highMarks - averageMarks
+
+  const markDistribution = { h: highMarks, a: averageMarks, l: lowMarks }
+
+  if (highMarks === totalMarks) {
+      return [parseFloat(classAverage), markDistribution, "They did well"]
+  } else {
+      return [parseFloat(classAverage), markDistribution]
+  }
+}
