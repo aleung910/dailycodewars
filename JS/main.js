@@ -95,3 +95,10 @@ function testResult(array) {
       return [parseFloat(classAverage), markDistribution]
   }
 }
+
+//day 3 of codewars
+function mystery() {
+  var results =
+    {sanity: 'Hello'};
+  return results;
+}
