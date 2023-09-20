@@ -102,3 +102,13 @@ function mystery() {
     {sanity: 'Hello'};
   return results;
 }
+
+//day 4 of codewars 
+//century from year
+
+function century(year){
+  let century = Math.floor((year-1)/100) + 1;
+  return century;
+}
+
+const century = year => Math.ceil(year/100)
