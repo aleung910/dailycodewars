@@ -124,3 +124,19 @@ function sayHello(name, city, state) {
   const fullName = name.join(' ');
   return `Hello, ${fullName}! Welcome to ${city}, ${state}!`;
 }
+
+function lastFibDigit(n) {
+  const period = 60;
+  const remainder = n % period;
+  let fibPrev = 0;
+  let fibCurrent = 1;
+
+  if (remainder === 0) return 0;
+  if (remainder === 1) return 1;
+
+  for (let i = 2; i <= remainder; i++) {
+    [fibPrev, fibCurrent] = [fibCurrent, (fibPrev + fibCurrent) % 10];
+  }
+
+  return fibCurrent;
+}
