@@ -119,3 +119,8 @@ function doubleInteger(i) {
   // i will be an integer. Double it and return it.
   return i;
 }
+
+function sayHello(name, city, state) {
+  const fullName = name.join(' ');
+  return `Hello, ${fullName}! Welcome to ${city}, ${state}!`;
+}
