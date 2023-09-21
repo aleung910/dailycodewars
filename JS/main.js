@@ -112,3 +112,10 @@ function century(year){
 }
 
 const century = year => Math.ceil(year/100)
+
+//day 5 of cw
+//doubling
+function doubleInteger(i) {
+  // i will be an integer. Double it and return it.
+  return i;
+}
