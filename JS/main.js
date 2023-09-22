@@ -149,3 +149,12 @@ function lovefunc(flower1, flower2){
       return false;
   }
 }
+
+//better code
+function lovefunc(flower1, flower2){
+  return flower1 % 2 !== flower2 % 2;
+}
+
+function printArray(array){
+  return array.join(',')
+ }
