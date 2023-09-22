@@ -158,3 +158,12 @@ function lovefunc(flower1, flower2){
 function printArray(array){
   return array.join(',')
  }
+
+//day 7 of CW
+function grow(x){
+  return x.reduce ((acc,cum) => acc * cum,1)
+}
+
+function twiceAsOld(dadYearsOld, sonYearsOld) {
+  return Math.abs(dadYearsOld - 2 * sonYearsOld);
+}
