@@ -181,3 +181,38 @@ function solution(number){
   return sum;
 
 }
+
+//day 8 of CW
+function NoBoringZeros(n){
+  while (n%10==0 && n!=0){
+    n/=10;
+  }
+  return n;
+}
+
+function isPangram(sentence) {
+  const alphabet = 'abcdefghijklmnopqrstuvwxyz';
+  const letters = new Set();
+
+  for (const char of sentence) {
+    if (/^[a-zA-Z]$/.test(char)) {
+      letters.add(char.toLowerCase());
+    }
+  }
+
+  for (const letter of alphabet) {
+    if (!letters.has(letter)) {
+      return false;
+    }
+  }
+
+  return true;
+}
+
+//BETTER CODE
+function isPangram(string){
+  string = string.toLowerCase();
+  return "abcdefghijklmnopqrstuvwxyz".split("").every(function(x){
+    return string.indexOf(x) !== -1;
+  });
+}
