@@ -216,3 +216,31 @@ function isPangram(string){
     return string.indexOf(x) !== -1;
   });
 }
+
+//day 9 of CW
+//RETURN ARRAY WITH VALUES DOUBLED
+function maps(x){
+  return x.map((x) => {return x*2});
+}
+
+function dropWhile(array, predicate) {
+  let index = 0;
+  while (index < array.length && predicate(array[index])) {
+    index++;
+  }
+  return array.slice(index);
+}
+
+//better
+function dropWhile(arr, pred) {
+  for (var i = 0; i < arr.length && pred(arr[i]); ++i) ;
+  return arr.slice(i)
+}
+
+//FIND ODD AND DN INCREMEN
+function findOdd(A) {
+  return A.find((item) => A.filter(i => i === item).length % 2 !== 0);
+}
+
+//bterer
+const findOdd = (xs) => xs.reduce((a, b) => a ^ b);
