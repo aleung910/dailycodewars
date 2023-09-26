@@ -244,3 +244,8 @@ function findOdd(A) {
 
 //bterer
 const findOdd = (xs) => xs.reduce((a, b) => a ^ b);
+
+//day 10 of CW
+function abbrevName(name){
+  return name.split(' ').map(word=> word[0].toUpperCase()).join('.')
+}
