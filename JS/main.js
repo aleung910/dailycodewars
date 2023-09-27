@@ -249,3 +249,7 @@ const findOdd = (xs) => xs.reduce((a, b) => a ^ b);
 function abbrevName(name){
   return name.split(' ').map(word=> word[0].toUpperCase()).join('.')
 }
+//DAY11 OF cw
+function getCount(str) {
+  return str.split('').filter((char) => 'aeiou'.includes(char)).length;
+}
