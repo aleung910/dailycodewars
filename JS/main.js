@@ -253,3 +253,17 @@ function abbrevName(name){
 function getCount(str) {
   return str.split('').filter((char) => 'aeiou'.includes(char)).length;
 }
+
+//day12 of CW missed a day 
+//max and min of list
+var min = function(list){
+    
+  let sorted = list.sort((a,b) => a-b)
+  return sorted[0] 
+}
+
+var max = function(list){
+    
+  let sorted = list.sort((a,b) => a-b)
+  return sorted[sorted.length-1] 
+}
