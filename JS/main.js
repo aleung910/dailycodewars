@@ -267,3 +267,13 @@ var max = function(list){
   let sorted = list.sort((a,b) => a-b)
   return sorted[sorted.length-1] 
 }
+
+//day 13 of CW
+function disemvowel(str) {
+  return str.replace(/[aeiou]/gi, '');
+}
+//vs
+function disemvowel(str) {
+  const vowels = new Set(['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'])
+  return str.split('').filter(char => !vowels.has(char)).join('');
+}
