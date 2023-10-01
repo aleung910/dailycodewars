@@ -277,3 +277,19 @@ function disemvowel(str) {
   const vowels = new Set(['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'])
   return str.split('').filter(char => !vowels.has(char)).join('');
 }
+
+//day14 of CW
+function likes(names) {
+  switch(names.length) {
+      case 0:
+          return "no one likes this";
+      case 1:
+          return names[0] + " likes this";
+      case 2:
+          return names[0] + " and " + names[1] + " like this";
+      case 3:
+          return names[0] + ", " + names[1] + " and " + names[2] + " like this";
+      default:
+          return names[0] + ", " + names[1] + " and " + (names.length - 2) + " others like this";
+  }
+}
