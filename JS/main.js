@@ -293,3 +293,9 @@ function likes(names) {
           return names[0] + ", " + names[1] + " and " + (names.length - 2) + " others like this";
   }
 }
+
+
+//day15 of cw
+function findNeedle(haystack) {
+  return "found the needle at position " + haystack.indexOf("needle");
+}
