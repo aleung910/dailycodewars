@@ -299,3 +299,8 @@ function likes(names) {
 function findNeedle(haystack) {
   return "found the needle at position " + haystack.indexOf("needle");
 }
+
+//day16 of cw
+var stringToNumber = function(str){
+  return parseInt(str);
+}
