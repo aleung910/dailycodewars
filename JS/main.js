@@ -304,3 +304,8 @@ function findNeedle(haystack) {
 var stringToNumber = function(str){
   return parseInt(str);
 }
+
+//day 17 of cw
+function alphabetPosition(text) {
+  return text.toLowerCase().split('').map(a => a.charCodeAt(0) - 96).filter(a => a > 0 && a < 27).join(' ');
+}
