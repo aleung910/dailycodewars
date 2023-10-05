@@ -309,3 +309,8 @@ var stringToNumber = function(str){
 function alphabetPosition(text) {
   return text.toLowerCase().split('').map(a => a.charCodeAt(0) - 96).filter(a => a > 0 && a < 27).join(' ');
 }
+
+//day18 of CW
+function invert(array) {
+  return array.map(num => -num);
+}
