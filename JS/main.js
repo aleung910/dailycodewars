@@ -314,3 +314,8 @@ function alphabetPosition(text) {
 function invert(array) {
   return array.map(num => -num);
 }
+
+//day19 of CW
+function squareDigits(num){
+  return +num.toString().split('').map(i => i*i).join('');
+}
