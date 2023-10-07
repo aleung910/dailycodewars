@@ -319,3 +319,8 @@ function invert(array) {
 function squareDigits(num){
   return +num.toString().split('').map(i => i*i).join('');
 }
+
+//day 20 of CW
+function fakeBin(x){
+  return x.split('').map(n=> n < 5 ? 0 : 1).join('');
+}
