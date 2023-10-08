@@ -324,3 +324,8 @@ function squareDigits(num){
 function fakeBin(x){
   return x.split('').map(n=> n < 5 ? 0 : 1).join('');
 }
+
+//day21 of CW
+function filter_list(l) {
+  return l.filter(ele => typeof ele === 'number');
+}
