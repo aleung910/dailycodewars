@@ -329,3 +329,6 @@ function fakeBin(x){
 function filter_list(l) {
   return l.filter(ele => typeof ele === 'number');
 }
+
+//day 22 of CW
+const uniqueInOrder = iterable => [...iterable].filter((el, i) => el !== iterable[i - 1]);
