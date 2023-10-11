@@ -332,3 +332,14 @@ function filter_list(l) {
 
 //day 22 of CW
 const uniqueInOrder = iterable => [...iterable].filter((el, i) => el !== iterable[i - 1]);
+
+//day23 of CW
+function duplicateEncode(word){
+  return word
+    .toLowerCase()
+    .split('')
+    .map( function (a, i, w) {
+      return w.indexOf(a) == w.lastIndexOf(a) ? '(' : ')'
+    })
+    .join('');
+}
