@@ -343,3 +343,6 @@ function duplicateEncode(word){
     })
     .join('');
 }
+
+//day24 of CW
+num => num < 10 ? 0 : 1 + persistence(Array.from(num.toString()).reduce((acc, curr) => acc * curr));
