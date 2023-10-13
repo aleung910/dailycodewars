@@ -346,3 +346,18 @@ function duplicateEncode(word){
 
 //day24 of CW
 num => num < 10 ? 0 : 1 + persistence(Array.from(num.toString()).reduce((acc, curr) => acc * curr));
+//day 25 of CW
+function order(words){
+  var word = words.split(' ')
+   var sort=[]
+   
+   for (i=0; i<=word.length;i++){
+     for (j =0; j< word.length; j++){
+       if(word[j].indexOf(i) >= 0){
+         sort.push(word[j])
+       }
+     }
+   }
+   return sort.join(' ');
+ 
+   }
