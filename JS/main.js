@@ -367,3 +367,8 @@ function order(words){
     const sum = a + b;
     return sum.toString(2);
   }
+
+  //day27 of CW
+  var isSquare = function(n){
+    return n < 0 ? false : Math.floor(Math.sqrt(n)) === Math.sqrt(n);
+  }
