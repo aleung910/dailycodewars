@@ -372,3 +372,8 @@ function order(words){
   var isSquare = function(n){
     return n < 0 ? false : Math.floor(Math.sqrt(n)) === Math.sqrt(n);
   }
+
+  //day28 of CW
+  function solution(str, ending) {
+    return str.endsWith(ending);
+  }
