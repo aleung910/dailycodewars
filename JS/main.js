@@ -377,3 +377,9 @@ function order(words){
   function solution(str, ending) {
     return str.endsWith(ending);
   }
+
+//day29 of CW
+function digPow(n, p) {
+  const sum = String(n).split('').reduce((acc, digit, index) => acc + Math.pow(Number(digit), p + index), 0);
+  return sum % n === 0 ? sum / n : -1;
+}
