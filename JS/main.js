@@ -383,3 +383,8 @@ function digPow(n, p) {
   const sum = String(n).split('').reduce((acc, digit, index) => acc + Math.pow(Number(digit), p + index), 0);
   return sum % n === 0 ? sum / n : -1;
 }
+
+//day30 of CW
+function sortByLength(array) {
+  return array.sort((a, b) => a.length - b.length);
+}
