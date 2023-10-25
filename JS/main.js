@@ -388,3 +388,17 @@ function digPow(n, p) {
 function sortByLength(array) {
   return array.sort((a, b) => a.length - b.length);
 }
+//DAY31 OF Cw
+function diamond(n) {
+  if (n <= 0 || n % 2 === 0) return null;
+
+  let diamondString = '';
+
+  for (let i = 0; i < n; i++) {
+    const spaces = Math.abs((n - 2 * i - 1) / 2);
+    const stars = n - 2 * spaces;
+    diamondString += i !== Math.floor(n / 2) ? ' '.repeat(spaces) + '*'.repeat(stars) + '\n' : '*'.repeat(n) + '\n';
+  }
+
+  return diamondString;
+}
