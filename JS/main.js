@@ -402,3 +402,16 @@ function diamond(n) {
 
   return diamondString;
 }
+
+//day 32 of CW Bubble Sort
+function bubblesortOnce(a) {
+  const result = a.slice();
+
+  for (let i = 0; i < result.length - 1; i++) {
+      if (result[i] > result[i + 1]) {
+          [result[i], result[i + 1]] = [result[i + 1], result[i]];
+      }
+  }
+
+  return result;
+}
