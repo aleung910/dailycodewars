@@ -415,3 +415,18 @@ function bubblesortOnce(a) {
 
   return result;
 }
+//day 33 of CW cycle a list of values
+
+function cycle(direction, values, currentValue) {
+  const index = values.indexOf(currentValue);
+  if (index === -1) {
+      return null;
+  }
+  let nextIndex = index + direction;
+  if (nextIndex < 0) {
+      nextIndex = values.length - 1;
+  } else if (nextIndex >= values.length) {
+      nextIndex = 0;
+  }
+  return values[nextIndex];
+}
