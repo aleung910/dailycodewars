@@ -430,3 +430,15 @@ function cycle(direction, values, currentValue) {
   }
   return values[nextIndex];
 }
+//DAY34 OF CW
+function isLeapYear(year) {
+  if (year % 400 === 0) {
+    return true;
+  } else if (year % 100 === 0) {
+    return false;
+  } else if (year % 4 === 0) {
+    return true;
+  } else {
+    return false;
+  }
+}
