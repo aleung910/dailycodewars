@@ -452,3 +452,8 @@ function elevatorDistance(array) {
   
   return totalDistance;
 }
+//day36 of CW
+function nextHappyYear(year) {
+  while ((new Set(`${++year}`)).size < 4);
+  return year;
+}
