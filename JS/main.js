@@ -457,3 +457,24 @@ function nextHappyYear(year) {
   while ((new Set(`${++year}`)).size < 4);
   return year;
 }
+
+
+//day 37 of CW
+function strongEnough(earthquake, age) {
+  const STRENGTH = 1000 * Math.pow(0.99, age); // Calculate initial strength after decay
+
+  let earthquakeMagnitude = 1;
+  for (let i = 0; i < earthquake.length; i++) {
+      let shockwave = 0;
+      for (let j = 0; j < earthquake[i].length; j++) {
+          shockwave += earthquake[i][j];
+      }
+      earthquakeMagnitude *= shockwave;
+  }
+
+  if (earthquakeMagnitude <= STRENGTH) {
+      return "Safe!";
+  } else {
+      return "Needs Reinforcement!";
+  }
+}
